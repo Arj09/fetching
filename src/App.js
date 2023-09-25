@@ -6,6 +6,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Stack, Typography } 
 function App() {
 
   const [data, setData] = useState([])
+  
 
 
   //fetching data 
@@ -18,11 +19,13 @@ function App() {
     })
 
   },[])
-
+  
 
   return (
     <>
     <Box  sx={{width:'80vw', margin:"20px auto"}}>
+
+      <Typography sx={{textAlign:"center",  display: data.length == 0 ? 'blobk' : 'none'}} variant='h2'>Data is not available</Typography>
       
       {
         data.map((data)=>{
